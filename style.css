@@ -173,7 +173,7 @@
  flex-wrap: wrap;
  height: 706px;
  width: 702px;
- margin: auto;
+ margin: 23px auto;
  perspective: 1000px;
 }
 
@@ -183,7 +183,7 @@
  flex-wrap: wrap;
  height: 706px;
  width: 1186px;
- margin: auto;
+ margin: 23px auto;
  perspective: 1000px;
 }
 
