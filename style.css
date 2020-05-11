@@ -1,0 +1,530 @@
+.container {
+ background: url(./img/background.png) no-repeat;
+ background-size: cover;
+ display: flex;
+ max-width: 1340px;
+ min-width: 320px;
+ min-height: 700px;
+ margin: auto;
+}
+
+.menu { 
+ margin: 25px 100px 0;
+}
+
+.title {
+ color: #FFF;
+ margin-bottom: 8px;
+ font: normal bold 57px/67px "Roboto";
+}
+
+.subtitle {
+ color: #FFF;
+ margin: 0 0 60px 0;
+ font: normal bold 19px/22px "Roboto";
+}
+
+.difficulty-levels {
+ margin-bottom: 113px;
+ position: relative;
+}
+
+.level {
+ display: flex;
+ margin-bottom: 23px;
+ position: relative;
+}
+
+.level__simple,
+.level__average,
+.level__difficult {
+ background: none;
+ border: none;
+ color: #FFF;
+ font: normal bold 50px/59px "Roboto";
+ margin: 0;
+ outline: none;
+ padding-left: 48px;
+}
+
+.level__simple:hover,
+.level__average:hover,
+.level__difficult:hover {
+ cursor: pointer;
+ opacity: .8;
+}
+
+.level:visited::before,
+.level:hover::before,
+.level:active::before,
+.level_active:before {
+ background: url(./img/rectangle.png) no-repeat;
+ background-size: cover;
+ border: none;
+ content: "";
+ height: 25px;
+ width: 25px;
+ left: 0;
+ top: 15px;
+ position: absolute;
+}
+
+.start-button {
+ background: #D62B2E;
+ border: none;
+ border-radius: 7px;
+ color: #FFF;
+ font: normal bold 32px/37px "Roboto";
+ margin: 0;
+ height: 95px;
+ width: 352px;
+ outline: none;
+ padding: 0;
+}
+
+.start-button:hover {
+ cursor: pointer;
+ opacity: .9;
+}
+
+.pictures {
+ position: absolute;
+ top: 45%;
+ right: 8%;
+}
+
+.bottom-card {
+ height: 341px;
+ width: 218px;
+ transform: rotate(11.9deg);
+}
+
+.top-card {
+ height: 341px;
+ width: 218px;
+ position: relative;
+ right: 45px;
+ top: 20px;
+ transform: rotate(39.26deg);
+}
+
+.card-wrapper {
+ box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+ cursor: pointer;
+ height: 341px;
+ width: 218px;
+ position: relative;
+ transform-style: preserve-3d;
+ transition: transform 0.8s;
+}
+
+.card-wrapper_hover:hover {
+ box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+ transform: rotate(-3.08deg) translateY(-15px);
+ transition: .4s ease;
+}
+
+.card-backside {
+ background: url(./img/card.png) no-repeat;
+ backface-visibility: hidden;
+ height: 100%;
+ width: 100%;
+ position: absolute;
+ -webkit-backface-visibility: hidden;
+}
+
+.looser-card {
+ background: url(./img/game-over-card.png) no-repeat;
+ backface-visibility: hidden;
+ height: 341px;
+ width: 218px;
+ position:absolute;
+ transform: rotateY(180deg);
+ -webkit-backface-visibility: hidden;
+}
+
+.winner-card {
+ background: url(./img/card-with-bug.png) no-repeat;
+ backface-visibility: hidden;
+ height: 341px;
+ width: 218px;
+ position:absolute;
+ transform: rotateY(180deg);
+ -webkit-backface-visibility: hidden;
+}
+
+.card-click {
+ transform: rotateY(180deg);
+}
+
+.three-card-field {
+ display: flex;
+ justify-content: space-between;
+ position: relative;
+ height: 341px;
+ width: 702px;
+ margin: auto;
+ perspective: 1000px;
+}
+
+.six-card-field {
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ height: 706px;
+ width: 702px;
+ margin: 23px auto;
+ perspective: 1000px;
+}
+
+.ten-card-field {
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ height: 706px;
+ width: 1186px;
+ margin: 23px auto;
+ perspective: 1000px;
+}
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+ .container {
+  min-height: 650px;
+  max-height: 650px;
+  max-width: 1100px;
+  margin: auto;
+ }
+
+ .menu { 
+  margin: 30px 30px;
+ }
+
+ .title {
+  font: normal bold 50px/60px "Roboto";
+ }
+
+ .level__simple,
+ .level__average,
+ .level__difficult {
+  margin: 0;
+  font: normal bold 43px/52px "Roboto";
+ }
+
+ .start-button {
+  margin: 0 0 20px 0;
+  height: 90px;
+  width: 330px;
+  font: normal bold 28px/33px "Roboto";
+ }
+
+ .pictures {
+  top: 40%;
+  right: 8%;
+ }
+
+ .bottom-card,
+ .top-card {
+  height: 269px;
+  width: 173px;
+ }
+
+ .difficulty-levels {
+  margin-bottom: 100px;
+ }
+
+ .card-wrapper,
+ .card-backside,
+ .looser-card,
+ .winner-card {
+  background-size: 175px 271px;
+  height: 269px;
+  width: 173px;
+ }
+
+ .three-card-field {
+  height: 269px;
+  width: 567px;
+ }
+
+ .six-card-field {
+  height: 562px;
+  width: 567px;
+ }
+
+ .ten-card-field {
+  height: 562px;
+  width: 961px;
+ }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+ .container {
+  min-height: 1024px;
+  max-height: 1024px;
+  max-width: 1000px;
+ }
+
+ .menu { 
+  margin: auto 50px;
+ }
+
+ .title {
+  margin: 0 0 8px 0;
+  font: normal bold 50px/60px "Roboto";
+ }
+
+ .level__simple,
+ .level__average,
+ .level__difficult {
+  margin: 0;
+  font: normal bold 43px/52px "Roboto";
+ }
+
+ .start-button {
+  margin: 0 0 20px 0;
+  height: 90px;
+  width: 340px;
+  font: normal bold 28px/33px "Roboto";
+ }
+
+ .difficulty-levels {
+  margin-bottom: 70px;
+ }
+
+ .pictures {
+  display: none;
+ }
+
+ .difficulty-levels {
+  margin-bottom: 100px;
+ }
+
+ .card-wrapper,
+ .card-backside,
+ .looser-card,
+ .winner-card {
+  background-size: 146px 232px;
+  height: 230px;
+  width: 145px;
+ }
+
+ .three-card-field {
+  height: 230px;
+  width: 483px;
+ }
+
+ .six-card-field {
+  height: 484px;
+  width: 483px;
+ }
+
+ .ten-card-field {
+  height: 484px;
+  width: 760px;
+ }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+ .container {
+  min-height: 800px;
+  max-height: 1024px;
+  max-width: 768px;
+ }
+
+ .menu { 
+  margin: 40px 40px;
+ }
+
+ .title {
+  margin-bottom: 8px;
+  font: normal bold 40px/50px "Roboto";
+ }
+
+ .level__simple,
+ .level__average,
+ .level__difficult {
+  margin: 0;
+  font: normal bold 38px/48px "Roboto";
+ }
+
+ .difficulty-levels {
+  margin-bottom: 50px;
+ }
+
+ .start-button {
+  margin: 0 0 30px 0;
+  height: 80px;
+  width: 290px;
+  font: normal bold 25px/30px "Roboto";
+ }
+
+ .pictures {
+  display: none;
+ }
+
+ .card-wrapper,
+ .card-backside,
+ .looser-card,
+ .winner-card {
+  background-size: 86px 142px;
+  height: 140px;
+  width: 85px;
+ }
+
+ .three-card-field {
+  height: 164px;
+  width: 279px;
+ }
+
+ .six-card-field {
+  height: 304px;
+  width: 279px;
+ }
+
+ .ten-card-field {
+  height: 304px;
+  width: 473px;
+ }
+}
+
+@media (min-width: 321px) and (max-width: 480px) {
+ .container {
+ min-height: 740px;
+ max-height: 750px;
+ max-width: 480px;
+ }
+
+ .menu { 
+  margin: 20px 20px;
+ }
+
+ .title {
+  font: normal bold 40px/50px "Roboto";
+  margin: 0 0 8px 0;
+ }
+
+ .subtitle {
+  margin-bottom: 20px;
+ }
+
+ .level {
+  margin-bottom: 15px;
+ }
+
+ .level__simple,
+ .level__average,
+ .level__difficult {
+  margin: 0;
+  font: normal bold 30px/40px "Roboto";
+ }
+
+ .difficulty-levels {
+  margin-bottom: 30px;
+ }
+
+ .start-button {
+  margin: 0 0 20px 0;
+  height: 80px;
+  width: 250px;
+  font: normal bold 25px/30px "Roboto";
+ }
+
+ .pictures {
+  display: none;
+ }
+
+ .card-wrapper,
+ .card-backside,
+ .looser-card,
+ .winner-card {
+  background-size: 64px 102px;
+  height: 100px;
+  width: 63px;
+ }
+
+ .three-card-field {
+  height: 100px;
+  width: 210px;
+ }
+
+ .six-card-field {
+  height: 224px;
+  width: 209px;
+ }
+
+ .ten-card-field {
+  height: 540px;
+  width: 138px;
+ }
+}
+
+@media (max-width: 320px) {
+ .container {
+  min-height: 568px;
+  max-height: 750px;
+  max-width: 480px;
+ }
+
+ .menu { 
+  margin: 20px 20px;
+ }
+
+ .title {
+  font: normal bold 40px/50px "Roboto";
+  margin: 0 0 8px 0;
+ }
+
+ .subtitle {
+  margin-bottom: 20px;
+ }
+
+ .level {
+  margin-bottom: 15px;
+ }
+
+ .level__simple,
+ .level__average,
+ .level__difficult {
+  margin: 0;
+  font: normal bold 30px/40px "Roboto";
+ }
+
+ .difficulty-levels {
+  margin-bottom: 30px;
+ }
+
+ .start-button {
+  margin: 0 0 20px 0;
+  height: 80px;
+  width: 250px;
+  font: normal bold 25px/30px "Roboto";
+ }
+
+ .pictures {
+  display: none;
+ }
+
+ .card-wrapper,
+ .card-backside,
+ .looser-card,
+ .winner-card {
+  background-size: 64px 102px;
+  height: 100px;
+  width: 63px;
+ }
+
+ .three-card-field {
+  height: 100px;
+  width: 210px;
+ }
+
+ .six-card-field {
+  height: 224px;
+  width: 209px;
+ }
+
+ .ten-card-field {
+  height: 540px;
+  width: 138px;
+ }
+} 
